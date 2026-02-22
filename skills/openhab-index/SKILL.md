@@ -9,7 +9,7 @@ permissions:
 requires:
   env:
     - OPENHAB_BASE_URL
-    # Optional: OPENHAB_API_TOKEN for live REST calls
+    - OPENHAB_API_TOKEN for live REST calls
   bins:
     - jq
     - cat
@@ -57,7 +57,7 @@ Do **not**:
 
 ## Using index.json
 
-1. Load and parse `{baseDir}/../../memory/openhab/index.json` once per task.
+1. Load and parse `{baseDir}/memory/openhab/index.json` once per task.
 2. Use `items_by_name` for direct lookups (by itemName).
 3. Use `semantic_tree.locations` to navigate locations → equipment → points.
 4. Answer as much as possible from this index before falling back to live REST.
