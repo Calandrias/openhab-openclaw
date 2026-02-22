@@ -20,9 +20,6 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 REST_ROOT_FILE = OUTPUT_DIR / "rest_root.json"
 INDEX_FILE = OUTPUT_DIR / "index.json"
 
-MAX_CONCURRENCY = 10
-
-
 def make_headers() -> Dict[str, str]:
     headers: Dict[str, str] = {"Accept": "application/json"}
     if TOKEN:
