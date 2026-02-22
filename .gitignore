@@ -1,0 +1,4 @@
+memory/*
+.venv
+.env
+*.env
