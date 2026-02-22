@@ -25,11 +25,11 @@ You are a helper for reading a precomputed openHAB index JSON and, when necessar
 ## Files and data
 
 - The crawler script periodically writes:
-  - `{baseDir}/memory/openhab/index.json`
+  - `memory/openhab/index.json`
     - Contains:
       - `items_by_name`: map of itemName → item object (type, label, tags, groupNames, metadata, semantic, rest_url).
       - `semantic_tree`: locations → equipment → points (only item names; details in items_by_name).
-  - `{baseDir}/memory/openhab/rest_root.json`
+  - `memory/openhab/rest_root.json`
     - Contains:
       - Basic runtime info and an `endpoint_map` of openHAB REST endpoints (e.g. items, rules, persistence).
 
@@ -57,7 +57,7 @@ Do **not**:
 
 ## Using index.json
 
-1. Load and parse `{baseDir}/memory/openhab/index.json` once per task.
+1. Load and parse `memory/openhab/index.json` once per task.
 2. Use `items_by_name` for direct lookups (by itemName).
 3. Use `semantic_tree.locations` to navigate locations → equipment → points.
 4. Answer as much as possible from this index before falling back to live REST.
